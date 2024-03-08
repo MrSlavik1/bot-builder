@@ -4,6 +4,7 @@ tg.expand();
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
+console.log(tg.initDataUnsafe);
 
 let item = "";
 
