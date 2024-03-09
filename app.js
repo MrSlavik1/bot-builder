@@ -2,14 +2,14 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-function sendData(data) {
-	fetch('https://ffe0-2a12-5940-c90b-00-2.ngrok-free.app/telegram_web_app_data', {
-            method: 'POST',
+function sendData(product) {
+	fetch(`https://naturally-ample-mallard.ngrok-free.app/telegram_web_app_data?query_id=${encodeURIComponent(tg.initDataUnsafe.query_id)}&product=${encodeURIComponent(product)}`, {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-		'ngrok-skip-browser-warning': "69420",
+		'ngrok-skip-browser-warning': true,
             },
-            body: JSON.stringify(data)
+	    mode: "no-cors"
         })
 }
 
