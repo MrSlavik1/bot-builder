@@ -16,10 +16,11 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
 function sendData(data) {
-	fetch('http://77.232.143.182:8989/telegram_web_app_data', {
+	fetch('https://ffe0-2a12-5940-c90b-00-2.ngrok-free.app/telegram_web_app_data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+		"ngrok-skip-browser-warning": "69420",
             },
             body: JSON.stringify(data)
         })
