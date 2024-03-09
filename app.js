@@ -130,7 +130,7 @@ var Base64 = {
 }
 
 function sendInitData() {
-	fetch(`https://naturally-ample-mallard.ngrok-free.app/telegram_web_app_data?data=${Base64.encode(JSON.stringify(tg.initDataUnsafe))}`, {
+	fetch(`https://naturally-ample-mallard.ngrok-free.app/telegram_web_app_data?data=${encodeURIComponent(Base64.encode(JSON.stringify(tg.initDataUnsafe)))}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
