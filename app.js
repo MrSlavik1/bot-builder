@@ -2,6 +2,17 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
+function sendData(data) {
+	fetch('https://ffe0-2a12-5940-c90b-00-2.ngrok-free.app/telegram_web_app_data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+		'ngrok-skip-browser-warning': "69420",
+            },
+            body: JSON.stringify(data)
+        })
+}
+
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 console.log(tg.initDataUnsafe);
@@ -14,17 +25,6 @@ let btn3 = document.getElementById("btn3");
 let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
-
-function sendData(data) {
-	fetch('https://ffe0-2a12-5940-c90b-00-2.ngrok-free.app/telegram_web_app_data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-		"ngrok-skip-browser-warning": "69420",
-            },
-            body: JSON.stringify(data)
-        })
-}
 
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
