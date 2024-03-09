@@ -107,7 +107,7 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = `ale`;
+p.innerText = `${tg.initDataUnsafe.query_id}`;
 
 usercard.appendChild(p);
 
